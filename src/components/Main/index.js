@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import Item from '../Item';
+import { observer, inject } from 'mobx-react';
 
-export default class Main extends Component {
+@inject('titleStore')
+
+@observer export default class Main extends Component {
   render() {
+    const titleStore = this.props.titleStore;
+
     return (
       <div>
-        <Item key={'1'} title={'TEST1'} placeOfPublication={'TEST1'}/>
-        <Item key={'2'} title={'TEST2'} placeOfPublication={'TEST2'}/>
-        <Item key={'3'} title={'TEST3'} placeOfPublication={'TEST3'}/>
-        <Item key={'4'} title={'TEST4'} placeOfPublication={'TEST4'}/>
+        {
+          titleStore.filteredData.map(item => {
+            return <Item key={item.id} title={item.title} placeOfPublication={item.placeOfPublication} />
+          })
+        }
       </div>
-      )
-    }
+    )
+  }
 }
