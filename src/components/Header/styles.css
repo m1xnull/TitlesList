@@ -1,0 +1,13 @@
+.header {
+    height: 96px;
+    background: #D2D3D5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; 
+}
+
+.inscription {
+    font-size: 48px;
+}

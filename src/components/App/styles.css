@@ -1,0 +1,19 @@
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    min-height: 928px;
+    width: 100%;
+    max-width: 765.6px;
+    background: #eee;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
