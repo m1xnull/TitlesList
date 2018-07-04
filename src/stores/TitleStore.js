@@ -39,21 +39,21 @@ class TitleStore {
         event.preventDefault();
         this.filteredData.length = 0;
 
-        const url = `https://chroniclingamerica.loc.gov/search/titles/results/?terms=${this.searchValue}&format=json&page=1`;
+        const url = `http://localhost:3000/items?q=${this.searchValue}`;
         try {
             this.stateSearch = 'loading';
             let response = await fetch(url);
             let data = await response.json();
 
-            data.items.map((item) => {
+            data.map((item) => {
                 this.filteredData.push(
                     {
                         title: item.title,
-                        placeOfPublication: item.place_of_publication,
+                        placeOfPublication: item.placeOfPublication,
                         id: item.id,
                     }
                 )
-            })
+            });
 
             if (this.filteredData.length == 0)
                 this.stateSearch = 'empty';
