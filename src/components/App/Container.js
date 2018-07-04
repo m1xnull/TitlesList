@@ -1,10 +1,6 @@
-.flexContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+import styled from "styled-components";
 
-.container {
+export default styled.div`
     display: flex;
     flex-direction: column;
     background: white;
@@ -14,6 +10,5 @@
     background: #eee;
     justify-content: space-between;
     margin-top: 10px;
-}
-
-
+    padding: 5px;
+`;

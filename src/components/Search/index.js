@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
-import styles from './styles.css';
 import { observer, inject } from 'mobx-react';
+
 import Info from '../Info';
+
+import Wrapper from './Wrapper';
+import InputSearch from './InputSearch';
+import Button from './Button';
 
 @inject('titleStore')
 
@@ -9,17 +13,18 @@ import Info from '../Info';
     render() {
         const titleStore = this.props.titleStore;
         return (
-            <div className={styles.divSearch}>
+            <Wrapper>
                 <form onSubmit={titleStore.fetchItems}>
-                    <input className={styles.inputSearch}
+                    <InputSearch
                         value={titleStore.searchValue}
                         type="search"
                         placeholder="Search"
-                        onChange={titleStore.setValue} />
-                    <button className={styles.button} disabled={titleStore.stateSearchValue}>GO</button>
+                        onChange={titleStore.setValue}
+                    />
+                    <Button disabled={titleStore.stateSearchValue}>GO</Button>
                 </form>
                 <Info />
-            </div>
+            </Wrapper>
         )
     }
 }

@@ -3,7 +3,7 @@ import { observer, inject } from 'mobx-react';
 
 @inject('titleStore')
 
-@observer class Info extends Component {
+@observer export default class Info extends Component {
     loadItem = () => {
         const statusSearch = this.props.titleStore.stateSearch;
 
@@ -24,5 +24,3 @@ import { observer, inject } from 'mobx-react';
         );
     }
 }
-
-export default Info;

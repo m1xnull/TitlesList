@@ -1,30 +1,29 @@
 import React, { Component } from "react";
-import styles from "./styles.css";
-import '../../styles.css'
+import { injectGlobal } from '../../styles';
 
 import Header from '../Header';
 import Footer from '../Footer';
 import Search from '../Search';
 import Main from '../Main';
 
+import Wrapper from './Wrapper';
+import Container from './Container';
+
 import { Provider } from "mobx-react";
 import TitleStore from '../../stores/TitleStore.js';
 
-export default class App extends Component {
-    render() {
-        return (
-            <Provider titleStore={TitleStore}>
-                <div className={styles.flexContainer}>
-                    <div className={styles.container}>
-                        <div>
-                            <Header />
-                            <Search />
-                            <Main />
-                        </div>
-                        <Footer />
-                    </div>
+const App = () =>
+    <Provider titleStore={TitleStore}>
+        <Wrapper>
+            <Container>
+                <div>
+                    <Header />
+                    <Search />
+                    <Main />
                 </div>
-            </Provider>
-        );
-    }
-}
+                <Footer />
+            </Container>
+        </Wrapper>
+    </Provider>;
+
+export default App;
