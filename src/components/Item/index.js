@@ -7,7 +7,7 @@ export default (props) => {
 
             <div className={styles.title}>
                 <span>
-                    {props.title}
+                    {props.data.title}
                 </span>
             </div>
 
@@ -15,10 +15,10 @@ export default (props) => {
 
             <div className={styles.placeOfPublication}>
                 <span>
-                    {props.placeOfPublication}
+                    {props.data.placeOfPublication}
                 </span>
             </div>
-            
+
         </div>
     )
 }
