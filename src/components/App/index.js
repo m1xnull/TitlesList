@@ -8,12 +8,12 @@ import Search from '../Search';
 import Main from '../Main';
 
 import { Provider } from "mobx-react";
-import TitleStore from '../../stores/TitleStore.js';
+import TitlesStore from '../../stores/TitlesStore';
 
 export default class App extends Component {
     render() {
         return (
-            <Provider titleStore={TitleStore}>
+            <Provider titlesStore={TitlesStore}>
                 <div className={styles.flexContainer}>
                     <div className={styles.container}>
                         <div>

@@ -2,20 +2,20 @@ import React, { Component } from 'react'
 import styles from './styles.css';
 import { observer, inject } from 'mobx-react';
 
-@inject('titleStore')
+@inject('titlesStore')
 
 @observer export default class Search extends Component {
     render() {
-        const titleStore = this.props.titleStore;
+        const titlesStore = this.props.titlesStore;
         return (
             <div className={styles.divSearch}>
-                <form onSubmit={titleStore.handlerValue}>
+                <form onSubmit={titlesStore.handlerValue}>
                     <input className={styles.inputSearch}
-                        value={titleStore.searchValue}
+                        value={titlesStore.searchValue}
                         type="search"
                         placeholder="Search"
-                        onChange={titleStore.setValue} />
-                    <button className={styles.button} disabled={titleStore.stateSearchValue}>GO</button>
+                        onChange={titlesStore.setValue} />
+                    <button className={styles.button} disabled={titlesStore.stateSearchValue}>GO</button>
                 </form>
             </div>
         )
