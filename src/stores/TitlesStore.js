@@ -1,6 +1,7 @@
 import { observable, action, computed } from 'mobx';
 
-class TitleStore {
+class TitlesStore {
+
     @observable searchValue
     @observable filteredData
     @observable stateSearch
@@ -68,4 +69,4 @@ class TitleStore {
 
 }
 
-export default new TitleStore()
+export default new TitlesStore()
