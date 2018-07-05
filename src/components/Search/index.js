@@ -10,7 +10,7 @@ import Info from '../Info';
         const titlesStore = this.props.titlesStore;
         return (
             <div className={styles.divSearch}>
-                <form onSubmit={titleStore.fetchItems}>
+                <form onSubmit={titlesStore.fetchItems}>
                     <input className={styles.inputSearch}
                         value={titlesStore.searchValue}
                         type="search"

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 
-@inject('titleStore')
+@inject('titlesStore')
 
 @observer class Info extends Component {
     loadItem = () => {
-        const statusSearch = this.props.titleStore.stateSearch;
+        const statusSearch = this.props.titlesStore.stateSearch;
 
         switch (statusSearch) {
             case 'pending': return
@@ -16,7 +16,7 @@ import { observer, inject } from 'mobx-react';
     }
 
     render() {
-        const titleStore = this.props.titleStore;
+        const titlesStore = this.props.titlesStore;
         return (
             <div>
                 {this.loadItem()}
