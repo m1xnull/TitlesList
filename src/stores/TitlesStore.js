@@ -1,4 +1,4 @@
-import { observable, action, computed } from 'mobx';
+import { observable, action } from 'mobx';
 
 const mockData = [
     {
@@ -29,7 +29,6 @@ const mockData = [
 ]
 
 class TitlesStore {
-
     @observable searchValue
     @observable filteredData
 
@@ -41,26 +40,15 @@ class TitlesStore {
     @action('SET SEARCH VALUE')
     setValue = targetValue => {
         this.searchValue = targetValue;
-        if (this.searchValue == '') {
-            this.filteredData.clear();
-        }
+        this.searchValue == '' ? this.filteredData.clear() : false;
     }
 
     @action('HANDLER SEARCH VALUE')
-    handlerValue = event => {
-        event.preventDefault();
+    handlerValue = () => {
         this.filteredData.clear();
-        mockData.map((item, id) => {
-            if (this.searchValue.toLowerCase() == item.title.toLowerCase()) {
-                this.filteredData.push(
-                    {
-                        title: item.title,
-                        placeOfPublication: item.placeOfPublication,
-                        id: id,
-                    }
-                )
-            }
-        })
+        this.filteredData = mockData.filter((item) =>
+            this.searchValue.toLowerCase() == item.title.toLowerCase()
+        )
     }
 }
 
