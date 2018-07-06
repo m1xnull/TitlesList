@@ -10,9 +10,8 @@ import { observer, inject } from 'mobx-react';
     return (
       <div>
         {
-          titlesStore.filteredData.map(item => {
-            return <Item key={item.id} data={item} />
-          })
+          titlesStore.filteredData.map(item =>
+            <Item key={item.id} data={item} />)
         }
       </div>
     )
