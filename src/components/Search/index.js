@@ -11,8 +11,8 @@ import { observer, inject } from 'mobx-react';
     }
 
     render() {
-        const {titlesStore} = this.props;
-        
+        const { titlesStore } = this.props;
+
         return (
             <div className={styles.divSearch}>
                 <form onSubmit={titlesStore.handlerValue}>
