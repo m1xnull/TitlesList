@@ -42,14 +42,14 @@ class TitlesStore {
     setValue = targetValue => {
         this.searchValue = targetValue;
         if (this.searchValue == '') {
-            this.filteredData.length = 0;
+            this.filteredData.clear();
         }
     }
 
     @action('HANDLER SEARCH VALUE')
     handlerValue = event => {
         event.preventDefault();
-        this.filteredData.length = 0;
+        this.filteredData.clear();
         mockData.map((item, id) => {
             if (this.searchValue.toLowerCase() == item.title.toLowerCase()) {
                 this.filteredData.push(
