@@ -38,15 +38,6 @@ class TitlesStore {
         ]
     }
 
-    @computed get stateSearchValue() {
-        if (this.searchValue == '') {
-            return true
-        }
-        else {
-            return false
-        }
-    }
-
     @action('SET SEARCH VALUE')
     setValue = event => {
         this.searchValue = event.target.value;

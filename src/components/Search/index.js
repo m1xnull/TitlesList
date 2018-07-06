@@ -15,7 +15,7 @@ import { observer, inject } from 'mobx-react';
                         type="search"
                         placeholder="Search"
                         onChange={titlesStore.setValue} />
-                    <button className={styles.button} disabled={titlesStore.stateSearchValue}>GO</button>
+                    <button className={styles.button} disabled={!titlesStore.searchValue}>GO</button>
                 </form>
             </div>
         )
