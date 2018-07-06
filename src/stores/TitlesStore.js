@@ -39,8 +39,8 @@ class TitlesStore {
     }
 
     @action('SET SEARCH VALUE')
-    setValue = event => {
-        this.searchValue = event.target.value;
+    setValue = value => {
+        this.searchValue = value;
         if (this.searchValue == '') {
             this.filteredData.length = 0;
         }

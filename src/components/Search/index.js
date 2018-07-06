@@ -5,8 +5,14 @@ import { observer, inject } from 'mobx-react';
 @inject('titlesStore')
 
 @observer export default class Search extends Component {
+
+    setValue = event => {
+        this.props.titlesStore.setValue(event.target.value);
+    }
+
     render() {
-        const titlesStore = this.props.titlesStore;
+        const {titlesStore} = this.props;
+        
         return (
             <div className={styles.divSearch}>
                 <form onSubmit={titlesStore.handlerValue}>
@@ -14,7 +20,7 @@ import { observer, inject } from 'mobx-react';
                         value={titlesStore.searchValue}
                         type="search"
                         placeholder="Search"
-                        onChange={titlesStore.setValue} />
+                        onChange={this.setValue} />
                     <button className={styles.button} disabled={!titlesStore.searchValue}>GO</button>
                 </form>
             </div>

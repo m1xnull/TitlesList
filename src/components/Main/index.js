@@ -6,13 +6,12 @@ import { observer, inject } from 'mobx-react';
 
 @observer export default class Main extends Component {
   render() {
-    const titlesStore = this.props.titlesStore;
-
+    const { titlesStore } = this.props;
     return (
       <div>
         {
           titlesStore.filteredData.map(item => {
-            return <Item key={item.id} data={item}/>
+            return <Item key={item.id} data={item} />
           })
         }
       </div>
