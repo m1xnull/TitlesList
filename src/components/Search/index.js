@@ -6,8 +6,17 @@ import Info from '../Info';
 @inject('titlesStore')
 
 @observer export default class Search extends Component {
+    setValue = event => {
+        this.props.titlesStore.setValue(event.target.value);
+    }
+
+    handlerValue = event => {
+        event.preventDefault();
+        this.props.titlesStore.handlerValue();
+    }
+
     render() {
-        const titlesStore = this.props.titlesStore;
+        const { titlesStore } = this.props;
         return (
             <div className={styles.divSearch}>
                 <form onSubmit={titlesStore.fetchItems}>
@@ -15,8 +24,8 @@ import Info from '../Info';
                         value={titlesStore.searchValue}
                         type="search"
                         placeholder="Search"
-                        onChange={titlesStore.setValue} />
-                    <button className={styles.button} disabled={titlesStore.stateSearchValue}>GO</button>
+                        onChange={this.setValue} />
+                    <button className={styles.button} disabled={!titlesStore.searchValue}>GO</button>
                 </form>
                 <Info />
             </div>

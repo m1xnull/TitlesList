@@ -1,7 +1,34 @@
-import { observable, action, computed } from 'mobx';
+import { observable, action } from 'mobx';
+
+const mockData = [
+    {
+        title: 'TEST1',
+        placeOfPublication: 'TEST1 TEST1',
+        id: "1"
+    },
+    {
+        title: 'TEST1',
+        placeOfPublication: 'TEST2 TEST2',
+        id: '2'
+    },
+    {
+        title: 'TEST1',
+        placeOfPublication: 'TEST3 TEST3',
+        id: '3'
+    },
+    {
+        title: 'TEST2',
+        placeOfPublication: 'TEST1 TEST1',
+        id: '4'
+    },
+    {
+        title: 'TEST2',
+        placeOfPublication: 'TEST2 TEST2',
+        id: '5'
+    }
+]
 
 class TitlesStore {
-
     @observable searchValue
     @observable filteredData
     @observable stateSearch
