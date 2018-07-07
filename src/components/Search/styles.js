@@ -11,7 +11,8 @@ export const Button = styled.button`
     font-size: 18px;
     outline: none;
     margin: 0 15px;
-`
+`;
+
 export const InputSearch = styled.input`
     height: 32px;
     width: 320px;
@@ -20,7 +21,8 @@ export const InputSearch = styled.input`
     border-radius: 10px;
     padding: 0 10px;
     outline: none;
-`
+`;
+
 export const Wrapper = styled.div`
     display: flex;
     justify-content: flex-start;
@@ -30,4 +32,4 @@ export const Wrapper = styled.div`
     background: #D2D3D5;
     margin: 8px 0px;
     border-radius: 10px;
-`
+`;

@@ -23,4 +23,5 @@ const App = () =>
             </Container>
         </Wrapper>
     </Provider>;
+
 export default App;

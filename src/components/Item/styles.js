@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const greyBg = styled.div`
+export const GreyBg = styled.div`
     transform: rotate(-13deg) translateY(-120px);
     width: 500px;
     height: 300px;

@@ -1,4 +1,4 @@
-import { observable, action } from 'mobx';
+import { observable, action } from 'mobx'
 
 class Title {
     constructor(title, placeOfPublication, id) {
