@@ -1,7 +1,6 @@
 import React from 'react'
 
-import Wrapper from './Wrapper';
-import Text from './Text';
+import { Text, Wrapper } from './styles.js'
 
 const Footer = () =>
   <Wrapper>

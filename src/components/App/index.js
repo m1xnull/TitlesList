@@ -1,19 +1,17 @@
 import React, { Component } from "react";
-import { injectGlobal } from '../../styles';
 
 import Header from '../Header';
 import Footer from '../Footer';
 import Search from '../Search';
 import Main from '../Main';
 
-import Wrapper from './Wrapper';
-import Container from './Container';
+import { Wrapper, Container } from './styles.js'
 
 import { Provider } from "mobx-react";
-import TitleStore from '../../stores/TitleStore.js';
+import TitlesStore from '../../stores/TitlesStore';
 
 const App = () =>
-    <Provider titleStore={TitleStore}>
+    <Provider titlesStore={TitlesStore}>
         <Wrapper>
             <Container>
                 <div>
@@ -25,5 +23,4 @@ const App = () =>
             </Container>
         </Wrapper>
     </Provider>;
-
 export default App;

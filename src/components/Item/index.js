@@ -1,16 +1,15 @@
 import React from 'react'
 
-import Wrapper from './Wrapper';
-import Title from './Title';
-import GreyBg from './greyBg';
-import PlaceOfPublication from './PlaceOfPublication';
+import { Wrapper, Title, GreyBg, PlaceOfPublication } from './styles.js'
 
 export default (props) => {
+    const { data } = props;
+
     return (
         <Wrapper>
             <Title>
                 <span>
-                    {props.title}
+                    {data.title}
                 </span>
             </Title>
 
@@ -18,7 +17,7 @@ export default (props) => {
 
             <PlaceOfPublication>
                 <span>
-                    {props.placeOfPublication}
+                    {data.placeOfPublication}
                 </span>
             </PlaceOfPublication>
         </Wrapper>
