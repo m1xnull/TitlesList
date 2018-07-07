@@ -3,25 +3,32 @@ import { observer, inject } from 'mobx-react';
 
 import Info from '../Info';
 
-import Wrapper from './Wrapper';
-import InputSearch from './InputSearch';
-import Button from './Button';
+import { Wrapper, InputSearch, Button } from './styles.js'
 
-@inject('titleStore')
+@inject('titlesStore')
 
 @observer export default class Search extends Component {
+    setValue = event => {
+        this.props.titlesStore.setValue(event.target.value);
+    }
+
+    handlerValue = event => {
+        event.preventDefault();
+        this.props.titlesStore.fetchItems();
+    }
+
     render() {
-        const titleStore = this.props.titleStore;
+        const { titlesStore } = this.props;
+
         return (
             <Wrapper>
-                <form onSubmit={titleStore.fetchItems}>
+                <form onSubmit={this.handlerValue}>
                     <InputSearch
-                        value={titleStore.searchValue}
+                        value={titlesStore.searchValue}
                         type="search"
                         placeholder="Search"
-                        onChange={titleStore.setValue}
-                    />
-                    <Button disabled={titleStore.stateSearchValue}>GO</Button>
+                        onChange={this.setValue} />
+                    <Button disabled={!titlesStore.searchValue}>GO</Button>
                 </form>
                 <Info />
             </Wrapper>
