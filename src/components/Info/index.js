@@ -4,10 +4,9 @@ import { observer, inject } from 'mobx-react';
 @inject('titlesStore')
 
 @observer class Info extends Component {
-    loadItem = () => {
-        const { statusSearch } = this.props.titlesStore;
-
-        switch (statusSearch) {
+    renderStatus() {
+        const { searchStatus } = this.props.titlesStore;
+        switch (searchStatus) {
             case 'pending': return
             case 'loading': return <h3>Поиск статей</h3>
             case 'empty': return <h3>Ничего не найдено</h3>
@@ -16,11 +15,7 @@ import { observer, inject } from 'mobx-react';
     }
 
     render() {
-        return (
-            <div>
-                {this.loadItem()}
-            </div>
-        );
+        return <div>{this.renderStatus()}</div>
     }
 }
 
