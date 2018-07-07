@@ -1,99 +1,48 @@
 import { observable, action } from 'mobx';
 
-const mockData = [
-    {
-        title: 'TEST1',
-        placeOfPublication: 'TEST1 TEST1',
-        id: "1"
-    },
-    {
-        title: 'TEST1',
-        placeOfPublication: 'TEST2 TEST2',
-        id: '2'
-    },
-    {
-        title: 'TEST1',
-        placeOfPublication: 'TEST3 TEST3',
-        id: '3'
-    },
-    {
-        title: 'TEST2',
-        placeOfPublication: 'TEST1 TEST1',
-        id: '4'
-    },
-    {
-        title: 'TEST2',
-        placeOfPublication: 'TEST2 TEST2',
-        id: '5'
+class Title {
+    constructor(title, placeOfPublication, id) {
+        this.title = title;
+        this.placeOfPublication = placeOfPublication;
+        this.id = id;
     }
-]
+}
 
-class TitlesStore {
+ class TitlesStore {
     @observable searchValue
     @observable filteredData
-    @observable stateSearch
+    @observable searchStatus
 
     constructor() {
         this.searchValue = '';
         this.filteredData = [];
-        this.stateSearch = 'pending';
-        this.fetchItems = this.fetchItems.bind(this);
-    }
-
-    @computed get stateSearchValue() {
-        if (this.searchValue == '') {
-            return true
-        }
-        else {
-            return false
-        }
-    }
-
-    @computed get statusSearch() {
-        return this.stateSearch;
+        this.searchStatus = 'pending';
     }
 
     @action('SET SEARCH VALUE')
-    setValue = event => {
-        this.searchValue = event.target.value;
+    setValue = targetValue => {
+        this.searchValue = targetValue;
         if (this.searchValue == '') {
             this.filteredData.length = 0;
-            this.stateSearch = 'pending';
+            this.searchStatus = 'pending';
         }
     }
 
     @action('HANDLER SEARCH VALUE')
-    async fetchItems(event) {
-        event.preventDefault();
-        this.filteredData.length = 0;
-
+    async fetchItems() {
+        this.filteredData.clear();
         const url = `https://chroniclingamerica.loc.gov/search/titles/results/?terms=${this.searchValue}&format=json&page=1`;
         try {
-            this.stateSearch = 'loading';
+            this.searchStatus = 'loading';
             let response = await fetch(url);
             let data = await response.json();
-
-            data.items.map((item) => {
-                this.filteredData.push(
-                    {
-                        title: item.title,
-                        placeOfPublication: item.place_of_publication,
-                        id: item.id,
-                    }
-                )
-            })
-
-            if (this.filteredData.length == 0)
-                this.stateSearch = 'empty';
-            else
-                this.stateSearch = 'pending';
+            data.items.map(item => this.filteredData.push(new Title(item.title, item.place_of_publication, item.id)));
+            this.filteredData.length == 0 ? this.searchStatus = 'empty' : this.searchStatus = 'pending';
         }
-
         catch (error) {
-            this.stateSearch = 'error';
+            this.searchStatus = 'error';
         }
     }
-
 }
 
-export default new TitlesStore()
+export default new TitlesStore;
