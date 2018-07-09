@@ -8,13 +8,13 @@ import { Wrapper, InputSearch, Button } from './styles.js'
 @inject('titlesStore')
 
 @observer export default class Search extends Component {
-    setValue = event => {
+    onChange = event => {
         this.props.titlesStore.setValue(event.target.value);
     }
 
-    handlerValue = event => {
+    onSubmit = event => {
         event.preventDefault();
-        this.props.titlesStore.fetchItems();
+        this.props.titlesStore.fetchArticles();
     }
 
     render() {
@@ -22,12 +22,13 @@ import { Wrapper, InputSearch, Button } from './styles.js'
 
         return (
             <Wrapper>
-                <form onSubmit={this.handlerValue}>
-                    <InputSearch
+                <form onSubmit={this.onSubmit}>
+                    <InputSearch 
                         value={titlesStore.searchValue}
                         type="search"
                         placeholder="Search"
-                        onChange={this.setValue} />
+                        onChange={this.onChange}
+                    />
                     <Button disabled={!titlesStore.searchValue}>GO</Button>
                 </form>
                 <Info />
