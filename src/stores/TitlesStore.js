@@ -1,4 +1,4 @@
-import { observable, action } from 'mobx'
+import { observable, action, runInAction } from 'mobx';
 
 class Title {
     constructor(title, placeOfPublication, id) {
@@ -19,7 +19,7 @@ class TitlesStore {
         this.searchStatus = 'pending';
     }
 
-    @action('SET SEARCH VALUE')
+    @action('SETS THE CURRENT STATE OF THE SEARCH FIELD')
     setValue = targetValue => {
         this.searchValue = targetValue;
         if (this.searchValue == '') {
@@ -28,19 +28,23 @@ class TitlesStore {
         }
     }
 
-    @action('HANDLER SEARCH VALUE')
-    async fetchItems() {
+    @action('FETCH ARTICLES')
+    async fetchArticles() {
         this.filteredData.clear();
         const url = `http://localhost:3000/items?q=${this.searchValue}`;
         try {
             this.searchStatus = 'loading';
             let response = await fetch(url);
             let data = await response.json();
-            data.map(item => this.filteredData.push(new Title(item.title, item.placeOfPublication, item.id)));
-            this.filteredData.length == 0 ? this.searchStatus = 'empty' : this.searchStatus = 'pending';
+            data.items.forEach(item => this.filteredData.push(new Title(item.title, item.place_of_publication, item.id)));
+            runInAction(() => {
+                this.filteredData.length == 0 ? this.searchStatus = 'empty' : this.searchStatus = 'pending';
+            });
         }
         catch (error) {
-            this.searchStatus = 'error';
+            runInAction(() => {
+                this.searchStatus = 'error';
+            });
         }
     }
 }
