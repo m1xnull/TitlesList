@@ -31,7 +31,6 @@ class TitlesStore {
 
     @action('FETCH ARTICLES')
     async fetchArticles() {
-        this.filteredData.clear();
         const url = `https://chroniclingamerica.loc.gov/search/titles/results/?terms=${this.searchValue}&format=json&page=1`;
         try {
             this.searchStatus = 'loading';
