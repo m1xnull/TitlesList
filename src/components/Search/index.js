@@ -5,25 +5,27 @@ import { observer, inject } from 'mobx-react';
 @inject('titlesStore')
 
 @observer export default class Search extends Component {
-    setValue = event => {
+    onChange = event => {
         this.props.titlesStore.setValue(event.target.value);
     }
 
-    handlerValue = event => {
+    onSubmit = event => {
         event.preventDefault();
-        this.props.titlesStore.handlerValue();
+        this.props.titlesStore.fetch();
     }
 
     render() {
         const { titlesStore } = this.props;
         return (
             <div className={styles.divSearch}>
-                <form onSubmit={this.handlerValue}>
-                    <input className={styles.inputSearch}
+                <form onSubmit={this.onSubmit}>
+                    <input
+                        className={styles.inputSearch}
                         value={titlesStore.searchValue}
                         type="search"
                         placeholder="Search"
-                        onChange={this.setValue} />
+                        onChange={this.onChange}
+                    />
                     <button className={styles.button} disabled={!titlesStore.searchValue}>GO</button>
                 </form>
             </div>

@@ -37,18 +37,16 @@ class TitlesStore {
         this.filteredData = [];
     }
 
-    @action('SET SEARCH VALUE')
+    @action('SETS THE CURRENT STATE OF THE SEARCH FIELD')
     setValue = targetValue => {
         this.searchValue = targetValue;
         this.searchValue == '' ? this.filteredData.clear() : false;
     }
 
-    @action('HANDLER SEARCH VALUE')
-    handlerValue = () => {
-        this.filteredData.clear();
-        this.filteredData = mockData.filter((item) =>
-            this.searchValue.toLowerCase() == item.title.toLowerCase()
-        )
+    @action('FILTERING ARTICLES')
+    fetch = () => {
+        this.filteredData.replace(mockData.filter(item =>
+            this.searchValue.toLowerCase() == item.title.toLowerCase()));
     }
 }
 
