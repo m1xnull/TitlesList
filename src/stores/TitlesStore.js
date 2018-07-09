@@ -31,7 +31,6 @@ class TitlesStore {
 
     @action('FETCH ARTICLES')
     async fetchArticles() {
-        this.filteredData.clear();
         const url = `http://localhost:3000/items?q=${this.searchValue}`;
         try {
             this.searchStatus = 'loading';
