@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './styles.css'
 
-export default () => {
-  return (
-    <header className={styles.header}>
-      <span className={styles.inscription}>header</span>
-    </header>
-  )
-}
+import { Text, Wrapper } from './styles.js'
+
+const Header = () =>
+  <Wrapper>
+    <Text>header</Text>
+  </Wrapper>;
+
+export default Header;

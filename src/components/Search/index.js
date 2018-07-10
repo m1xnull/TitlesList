@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import styles from './styles.css';
 import { observer, inject } from 'mobx-react';
+
 import Info from '../Info';
+
+import { Wrapper, InputSearch, Button } from './styles.js'
 
 @inject('titlesStore')
 
@@ -19,19 +21,18 @@ import Info from '../Info';
         const { titlesStore } = this.props;
 
         return (
-            <div className={styles.divSearch}>
+            <Wrapper>
                 <form onSubmit={this.onSubmit}>
-                    <input
-                        className={styles.inputSearch}
+                    <InputSearch 
                         value={titlesStore.searchValue}
                         type="search"
                         placeholder="Search"
                         onChange={this.onChange}
                     />
-                    <button className={styles.button} disabled={!titlesStore.searchValue}>GO</button>
+                    <Button disabled={!titlesStore.searchValue}>GO</Button>
                 </form>
                 <Info />
-            </div>
+            </Wrapper>
         )
     }
 }

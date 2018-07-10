@@ -1,24 +1,25 @@
 import React from 'react'
-import styles from './styles.css'
+
+import { Wrapper, Title, GreyBg, PlaceOfPublication } from './styles.js'
 
 export default (props) => {
     const { data } = props;
 
     return (
-        <div className={styles.itemDiv}>
-            <div className={styles.title}>
+        <Wrapper>
+            <Title>
                 <span>
                     {data.title}
                 </span>
-            </div>
+            </Title>
 
-            <div className={styles.greyBg}></div>
+            <GreyBg></GreyBg>
 
-            <div className={styles.placeOfPublication}>
+            <PlaceOfPublication>
                 <span>
                     {data.placeOfPublication}
                 </span>
-            </div>
-        </div>
+            </PlaceOfPublication>
+        </Wrapper>
     )
 }

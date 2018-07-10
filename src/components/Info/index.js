@@ -3,7 +3,7 @@ import { observer, inject } from 'mobx-react';
 
 @inject('titlesStore')
 
-@observer class Info extends Component {
+@observer export default class Info extends Component {
     renderStatus() {
         const { searchStatus } = this.props.titlesStore;
         switch (searchStatus) {
@@ -18,5 +18,3 @@ import { observer, inject } from 'mobx-react';
         return <div>{this.renderStatus()}</div>
     }
 }
-
-export default Info;
