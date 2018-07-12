@@ -38,8 +38,8 @@ class TitlesStore {
             let data = await response.json();
 
             runInAction(() => {
-                this.filteredData.replace(data.items.map(item =>
-                    new Title(item.title, item.place_of_publication, item.id)));
+                this.filteredData.replace(data.map(item =>
+                    new Title(item.title, item.placeOfPublication, item.id)));
                 this.filteredData.length == 0 ? this.searchStatus = 'empty' : this.searchStatus = 'pending';
             });
         }
