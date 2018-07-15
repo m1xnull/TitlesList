@@ -1,53 +1,54 @@
-import { observable, action } from 'mobx';
+import { observable, action, runInAction } from 'mobx';
 
-const mockData = [
-    {
-        title: 'TEST1',
-        placeOfPublication: 'TEST1 TEST1',
-        id: "1"
-    },
-    {
-        title: 'TEST1',
-        placeOfPublication: 'TEST2 TEST2',
-        id: '2'
-    },
-    {
-        title: 'TEST1',
-        placeOfPublication: 'TEST3 TEST3',
-        id: '3'
-    },
-    {
-        title: 'TEST2',
-        placeOfPublication: 'TEST1 TEST1',
-        id: '4'
-    },
-    {
-        title: 'TEST2',
-        placeOfPublication: 'TEST2 TEST2',
-        id: '5'
+
+class Title {
+    constructor(title, placeOfPublication, id) {
+        this.title = title;
+        this.placeOfPublication = placeOfPublication;
+        this.id = id;
     }
-]
+}
 
 class TitlesStore {
     @observable searchValue
     @observable filteredData
+    @observable searchStatus
 
     constructor() {
         this.searchValue = '';
         this.filteredData = [];
+        this.searchStatus = 'pending';
     }
 
     @action('SETS THE CURRENT STATE OF THE SEARCH FIELD')
     setValue = targetValue => {
         this.searchValue = targetValue;
-        this.searchValue == '' ? this.filteredData.clear() : false;
+        if (this.searchValue == '') {
+            this.filteredData.length = 0;
+            this.searchStatus = 'pending';
+        }
     }
 
-    @action('FILTERING ARTICLES')
-    fetch = () => {
-        this.filteredData.replace(mockData.filter(item =>
-            this.searchValue.toLowerCase() == item.title.toLowerCase()));
+    @action('FETCH ARTICLES')
+    async fetchArticles() {
+        const url = `https://chroniclingamerica.loc.gov/search/titles/results/?terms=${this.searchValue}&format=json&page=1`;
+        try {
+            this.searchStatus = 'loading';
+            let response = await fetch(url);
+            let data = await response.json();
+
+            runInAction(() => {
+                this.filteredData.replace(data.items.map(item =>
+                    new Title(item.title, item.place_of_publication, item.id)));
+                this.filteredData.length == 0 ? this.searchStatus = 'empty' : this.searchStatus = 'pending';
+            });
+        }
+        catch (error) {
+            runInAction(() => {
+                this.searchStatus = 'error';
+            });
+        }
     }
 }
 
-export default new TitlesStore()
+export default new TitlesStore;

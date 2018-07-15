@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styles from './styles.css';
 import { observer, inject } from 'mobx-react';
+import Info from '../Info';
 
 @inject('titlesStore')
 
@@ -11,11 +12,12 @@ import { observer, inject } from 'mobx-react';
 
     onSubmit = event => {
         event.preventDefault();
-        this.props.titlesStore.fetch();
+        this.props.titlesStore.fetchArticles();
     }
 
     render() {
         const { titlesStore } = this.props;
+
         return (
             <div className={styles.divSearch}>
                 <form onSubmit={this.onSubmit}>
@@ -28,6 +30,7 @@ import { observer, inject } from 'mobx-react';
                     />
                     <button className={styles.button} disabled={!titlesStore.searchValue}>GO</button>
                 </form>
+                <Info />
             </div>
         )
     }
