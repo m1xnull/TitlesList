@@ -1,19 +1,23 @@
-import React, { Component } from 'react';
-import Item from '../Item';
-import { observer, inject } from 'mobx-react';
+import React, { Component } from "react";
+import { observer, inject } from "mobx-react";
+import PropTypes from "prop-types";
+import Item from "../Item";
 
-@inject('titlesStore')
+@inject("titlesStore")
+@observer
+export default class Main extends Component {
+  static propTypes = {
+    titlesStore: PropTypes.shape({
+      filteredData: PropTypes.array
+    }).isRequired
+  };
 
-@observer export default class Main extends Component {
   render() {
-    const { titlesStore } = this.props;
+    const {
+      titlesStore: { filteredData }
+    } = this.props;
     return (
-      <div>
-        {
-          titlesStore.filteredData.map(item =>
-            <Item key={item.id} data={item} />)
-        }
-      </div>
-    )
+      <div>{filteredData.map(item => <Item key={item.id} data={item} />)}</div>
+    );
   }
 }

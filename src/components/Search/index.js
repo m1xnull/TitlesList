@@ -1,38 +1,46 @@
-import React, { Component } from 'react'
-import { observer, inject } from 'mobx-react';
+import React, { Component } from "react";
+import { observer, inject } from "mobx-react";
+import PropTypes from "prop-types";
+import Info from "../Info";
 
-import Info from '../Info';
+import { Wrapper, InputSearch, Button } from "./styles";
 
-import { Wrapper, InputSearch, Button } from './styles.js'
+@inject("titlesStore")
+@observer
+export default class Search extends Component {
+  static propTypes = {
+    titlesStore: PropTypes.shape({}).isRequired
+  };
 
-@inject('titlesStore')
+  onChange = event => {
+    const { titlesStore } = this.props;
+    titlesStore.setValue(event.target.value);
+  };
 
-@observer export default class Search extends Component {
-    onChange = event => {
-        this.props.titlesStore.setValue(event.target.value);
-    }
+  onSubmit = event => {
+    const { titlesStore } = this.props;
+    event.preventDefault();
+    titlesStore.fetchArticles();
+  };
 
-    onSubmit = event => {
-        event.preventDefault();
-        this.props.titlesStore.fetchArticles();
-    }
+  render() {
+    const {
+      titlesStore: { searchValue }
+    } = this.props;
 
-    render() {
-        const { titlesStore } = this.props;
-
-        return (
-            <Wrapper>
-                <form onSubmit={this.onSubmit}>
-                    <InputSearch 
-                        value={titlesStore.searchValue}
-                        type="search"
-                        placeholder="Search"
-                        onChange={this.onChange}
-                    />
-                    <Button disabled={!titlesStore.searchValue}>GO</Button>
-                </form>
-                <Info />
-            </Wrapper>
-        )
-    }
+    return (
+      <Wrapper>
+        <form onSubmit={this.onSubmit}>
+          <InputSearch
+            value={searchValue}
+            type="search"
+            placeholder="Search"
+            onChange={this.onChange}
+          />
+          <Button disabled={!searchValue}>{"GO"}</Button>
+        </form>
+        <Info />
+      </Wrapper>
+    );
+  }
 }

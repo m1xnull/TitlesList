@@ -1,254 +1,254 @@
 {
-    "items": [
-        {
-            "title": "The Troy herald.",
-            "placeOfPublication": "Troy, Mo.",
-            "id": "/lccn/sn86063984/"
-        },
-        {
-            "title": "The Richmond climax.",
-            "placeOfPublication": "Richmond, Madison County, Ky.",
-            "id": "/lccn/sn86069165/"
-        },
-        {
-            "title": "The Vermont watchman.",
-            "placeOfPublication": "Montpelier, Vt.",
-            "id": "/lccn/sn86071719/"
-        },
-        {
-            "title": "Democratic banner.",
-            "placeOfPublication": "Bowling Green, Pike County, Mo.",
-            "id": "/lccn/sn89066057/"
-        },
-        {
-            "title": "The Marshall republican.",
-            "placeOfPublication": "Marshall, Saline County, Mo.",
-            "id": "/lccn/sn89066240/"
-        },
-        {
-            "title": "The weekly times-record.",
-            "placeOfPublication": "Valley City, N.D.",
-            "id": "/lccn/sn89074274/"
-        },
-        {
-            "title": "The southerner. [volume]",
-            "placeOfPublication": "Tarboro', Edgecombe Co., (N.C.)",
-            "id": "/lccn/sn90052434/"
-        },
-        {
-            "title": "Burlington weekly free press.",
-            "placeOfPublication": "Burlington, Vt.",
-            "id": "/lccn/sn86072143/"
-        },
-        {
-            "title": "Weekly confederate.",
-            "placeOfPublication": "Raleigh [N.C.]",
-            "id": "/lccn/sn86077149/"
-        },
-        {
-            "title": "The twice=a=week herald.",
-            "placeOfPublication": "Amarillo, Tex.",
-            "id": "/lccn/sn86088114/"
-        },
-        {
-            "title": "The weekly herald.",
-            "placeOfPublication": "Amarillo, Tex.",
-            "id": "/lccn/sn86088122/"
-        },
-        {
-            "title": "The progressive farmer.",
-            "placeOfPublication": "Winston, N.C.",
-            "id": "/lccn/sn92073049/"
-        },
-        {
-            "title": "The progressive farmer and the cotton plant.",
-            "placeOfPublication": "Raleigh, N.C.",
-            "id": "/lccn/sn92073050/"
-        },
-        {
-            "title": "North Carolina gazette.",
-            "placeOfPublication": "Raleigh, N.C.",
-            "id": "/lccn/sn92073076/"
-        },
-        {
-            "title": "The weekly sentinel. [volume]",
-            "placeOfPublication": "Winston-Salem, N.C.",
-            "id": "/lccn/sn92073231/"
-        },
-        {
-            "title": "The western sentinel. [volume]",
-            "placeOfPublication": "Winston-Salem, N.C.",
-            "id": "/lccn/sn92073232/"
-        },
-        {
-            "title": "The commonwealth.",
-            "placeOfPublication": "Scotland Neck, N.C.",
-            "id": "/lccn/sn92073906/"
-        },
-        {
-            "title": "The Democrat.",
-            "placeOfPublication": "Scotland Neck, Halifax Co., N.C.",
-            "id": "/lccn/sn92073907/"
-        },
-        {
-            "title": "The commonwealth.",
-            "placeOfPublication": "Scotland Neck, N.C.",
-            "id": "/lccn/sn92073908/"
-        },
-        {
-            "title": "The Wilson times. [volume]",
-            "placeOfPublication": "Wilson, N.C.",
-            "id": "/lccn/sn92073953/"
-        },
-        {
-            "title": "The daily times. [volume]",
-            "placeOfPublication": "Wilson, N.C.",
-            "id": "/lccn/sn92073954/"
-        },
-        {
-            "title": "The enquirer southerner. [volume]",
-            "placeOfPublication": "Tarboro', N.C.",
-            "id": "/lccn/sn92073987/"
-        },
-        {
-            "title": "El Hispano-Americano.",
-            "placeOfPublication": "Belen, Nuevo México",
-            "id": "/lccn/sn93061379/"
-        },
-        {
-            "title": "The Thlinget.",
-            "placeOfPublication": "Sitka, Alaska",
-            "id": "/lccn/sn94050023/"
-        },
-        {
-            "title": "The Fort Worth gazette.",
-            "placeOfPublication": "Fort Worth, Tex.",
-            "id": "/lccn/sn86090803/"
-        },
-        {
-            "title": "The Caldwell tribune.",
-            "placeOfPublication": "Caldwell, Idaho Territory [Idaho]",
-            "id": "/lccn/sn86091092/"
-        },
-        {
-            "title": "The Garland City globe.",
-            "placeOfPublication": "Garland, Utah",
-            "id": "/lccn/sn86091396/"
-        },
-        {
-            "title": "The McDowell times.",
-            "placeOfPublication": "Keystone, W. Va.",
-            "id": "/lccn/sn86092050/"
-        },
-        {
-            "title": "The Morgantown monitor.",
-            "placeOfPublication": "Morgantown, Va. [W. Va.]",
-            "id": "/lccn/sn86092176/"
-        },
-        {
-            "title": "West Virginia daily oil review.",
-            "placeOfPublication": "Sistersville, W. Va.",
-            "id": "/lccn/sn86092355/"
-        },
-        {
-            "title": "Sistersville daily oil review.",
-            "placeOfPublication": "Sistersville, W. Va.",
-            "id": "/lccn/sn86092356/"
-        },
-        {
-            "title": "The daily register.",
-            "placeOfPublication": "Wheeling, W. Va.",
-            "id": "/lccn/sn86092517/"
-        },
-        {
-            "title": "Cooperstown courier.",
-            "placeOfPublication": "Cooperstown, Griggs Co., Dak. [N.D.]",
-            "id": "/lccn/sn88076993/"
-        },
-        {
-            "title": "Griggs courier.",
-            "placeOfPublication": "Cooperstown, Griggs Co., Dak. [N.D.]",
-            "id": "/lccn/sn88076998/"
-        },
-        {
-            "title": "The Mason County journal.",
-            "placeOfPublication": "Shelton, W.T.",
-            "id": "/lccn/sn88085081/"
-        },
-        {
-            "title": "Hannibal journal and western union.",
-            "placeOfPublication": "Hannibal, Mo.",
-            "id": "/lccn/sn87091070/"
-        },
-        {
-            "title": "Washington State journal.",
-            "placeOfPublication": "Ritzville, Wash.",
-            "id": "/lccn/sn87093055/"
-        },
-        {
-            "title": "Washington State journal and Adams County news.",
-            "placeOfPublication": "Ritzville, Wash.",
-            "id": "/lccn/sn87093057/"
-        },
-        {
-            "title": "The Oakes times.",
-            "placeOfPublication": "Oakes, N.D.",
-            "id": "/lccn/sn87096017/"
-        },
-        {
-            "title": "Emmons County record.",
-            "placeOfPublication": "Williamsport, D.T. [i.e. N.D.]",
-            "id": "/lccn/sn87096040/"
-        },
-        {
-            "title": "The silver blade.",
-            "placeOfPublication": "Rathdrum, Idaho",
-            "id": "/lccn/sn88056092/"
-        },
-        {
-            "title": "The St. Mary banner.",
-            "placeOfPublication": "Franklin, Parish of St. Mary, La.",
-            "id": "/lccn/sn88064384/"
-        },
-        {
-            "title": "The Bowbells tribune.",
-            "placeOfPublication": "Bowbells, Ward Co., N.D.",
-            "id": "/lccn/sn88076095/"
-        },
-        {
-            "title": "Oakes weekly Republican.",
-            "placeOfPublication": "Oakes, Dickey County, D.T. [i.e. N.D.]",
-            "id": "/lccn/sn88076144/"
-        },
-        {
-            "title": "Oakes Republican.",
-            "placeOfPublication": "Oakes, N.D.",
-            "id": "/lccn/sn88076145/"
-        },
-        {
-            "title": "The Cooperstown courier.",
-            "placeOfPublication": "Cooperstown, Griggs Co., N.D.",
-            "id": "/lccn/sn88076341/"
-        },
-        {
-            "title": "Devils Lake inter-ocean and Devils Lake free press.",
-            "placeOfPublication": "Devils Lake, Ramsey County, N.D.",
-            "id": "/lccn/sn88076515/"
-        },
-        {
-            "title": "Devils Lake inter-ocean.",
-            "placeOfPublication": "Devils Lake, N.D.",
-            "id": "/lccn/sn88076516/"
-        },
-        {
-            "title": "The Devils Lake world.",
-            "placeOfPublication": "Devils Lake, N.D.",
-            "id": "/lccn/sn88076522/"
-        },
-        {
-            "title": "Devils Lake weekly world.",
-            "placeOfPublication": "Devils Lake, N.D.",
-            "id": "/lccn/sn88076523/"
-        }
-    ]
+  "items": [
+    {
+      "title": "The Troy herald.",
+      "placeOfPublication": "Troy, Mo.",
+      "id": "/lccn/sn86063984/"
+    },
+    {
+      "title": "The Richmond climax.",
+      "placeOfPublication": "Richmond, Madison County, Ky.",
+      "id": "/lccn/sn86069165/"
+    },
+    {
+      "title": "The Vermont watchman.",
+      "placeOfPublication": "Montpelier, Vt.",
+      "id": "/lccn/sn86071719/"
+    },
+    {
+      "title": "Democratic banner.",
+      "placeOfPublication": "Bowling Green, Pike County, Mo.",
+      "id": "/lccn/sn89066057/"
+    },
+    {
+      "title": "The Marshall republican.",
+      "placeOfPublication": "Marshall, Saline County, Mo.",
+      "id": "/lccn/sn89066240/"
+    },
+    {
+      "title": "The weekly times-record.",
+      "placeOfPublication": "Valley City, N.D.",
+      "id": "/lccn/sn89074274/"
+    },
+    {
+      "title": "The southerner. [volume]",
+      "placeOfPublication": "Tarboro', Edgecombe Co., (N.C.)",
+      "id": "/lccn/sn90052434/"
+    },
+    {
+      "title": "Burlington weekly free press.",
+      "placeOfPublication": "Burlington, Vt.",
+      "id": "/lccn/sn86072143/"
+    },
+    {
+      "title": "Weekly confederate.",
+      "placeOfPublication": "Raleigh [N.C.]",
+      "id": "/lccn/sn86077149/"
+    },
+    {
+      "title": "The twice=a=week herald.",
+      "placeOfPublication": "Amarillo, Tex.",
+      "id": "/lccn/sn86088114/"
+    },
+    {
+      "title": "The weekly herald.",
+      "placeOfPublication": "Amarillo, Tex.",
+      "id": "/lccn/sn86088122/"
+    },
+    {
+      "title": "The progressive farmer.",
+      "placeOfPublication": "Winston, N.C.",
+      "id": "/lccn/sn92073049/"
+    },
+    {
+      "title": "The progressive farmer and the cotton plant.",
+      "placeOfPublication": "Raleigh, N.C.",
+      "id": "/lccn/sn92073050/"
+    },
+    {
+      "title": "North Carolina gazette.",
+      "placeOfPublication": "Raleigh, N.C.",
+      "id": "/lccn/sn92073076/"
+    },
+    {
+      "title": "The weekly sentinel. [volume]",
+      "placeOfPublication": "Winston-Salem, N.C.",
+      "id": "/lccn/sn92073231/"
+    },
+    {
+      "title": "The western sentinel. [volume]",
+      "placeOfPublication": "Winston-Salem, N.C.",
+      "id": "/lccn/sn92073232/"
+    },
+    {
+      "title": "The commonwealth.",
+      "placeOfPublication": "Scotland Neck, N.C.",
+      "id": "/lccn/sn92073906/"
+    },
+    {
+      "title": "The Democrat.",
+      "placeOfPublication": "Scotland Neck, Halifax Co., N.C.",
+      "id": "/lccn/sn92073907/"
+    },
+    {
+      "title": "The commonwealth.",
+      "placeOfPublication": "Scotland Neck, N.C.",
+      "id": "/lccn/sn92073908/"
+    },
+    {
+      "title": "The Wilson times. [volume]",
+      "placeOfPublication": "Wilson, N.C.",
+      "id": "/lccn/sn92073953/"
+    },
+    {
+      "title": "The daily times. [volume]",
+      "placeOfPublication": "Wilson, N.C.",
+      "id": "/lccn/sn92073954/"
+    },
+    {
+      "title": "The enquirer southerner. [volume]",
+      "placeOfPublication": "Tarboro', N.C.",
+      "id": "/lccn/sn92073987/"
+    },
+    {
+      "title": "El Hispano-Americano.",
+      "placeOfPublication": "Belen, Nuevo México",
+      "id": "/lccn/sn93061379/"
+    },
+    {
+      "title": "The Thlinget.",
+      "placeOfPublication": "Sitka, Alaska",
+      "id": "/lccn/sn94050023/"
+    },
+    {
+      "title": "The Fort Worth gazette.",
+      "placeOfPublication": "Fort Worth, Tex.",
+      "id": "/lccn/sn86090803/"
+    },
+    {
+      "title": "The Caldwell tribune.",
+      "placeOfPublication": "Caldwell, Idaho Territory [Idaho]",
+      "id": "/lccn/sn86091092/"
+    },
+    {
+      "title": "The Garland City globe.",
+      "placeOfPublication": "Garland, Utah",
+      "id": "/lccn/sn86091396/"
+    },
+    {
+      "title": "The McDowell times.",
+      "placeOfPublication": "Keystone, W. Va.",
+      "id": "/lccn/sn86092050/"
+    },
+    {
+      "title": "The Morgantown monitor.",
+      "placeOfPublication": "Morgantown, Va. [W. Va.]",
+      "id": "/lccn/sn86092176/"
+    },
+    {
+      "title": "West Virginia daily oil review.",
+      "placeOfPublication": "Sistersville, W. Va.",
+      "id": "/lccn/sn86092355/"
+    },
+    {
+      "title": "Sistersville daily oil review.",
+      "placeOfPublication": "Sistersville, W. Va.",
+      "id": "/lccn/sn86092356/"
+    },
+    {
+      "title": "The daily register.",
+      "placeOfPublication": "Wheeling, W. Va.",
+      "id": "/lccn/sn86092517/"
+    },
+    {
+      "title": "Cooperstown courier.",
+      "placeOfPublication": "Cooperstown, Griggs Co., Dak. [N.D.]",
+      "id": "/lccn/sn88076993/"
+    },
+    {
+      "title": "Griggs courier.",
+      "placeOfPublication": "Cooperstown, Griggs Co., Dak. [N.D.]",
+      "id": "/lccn/sn88076998/"
+    },
+    {
+      "title": "The Mason County journal.",
+      "placeOfPublication": "Shelton, W.T.",
+      "id": "/lccn/sn88085081/"
+    },
+    {
+      "title": "Hannibal journal and western union.",
+      "placeOfPublication": "Hannibal, Mo.",
+      "id": "/lccn/sn87091070/"
+    },
+    {
+      "title": "Washington State journal.",
+      "placeOfPublication": "Ritzville, Wash.",
+      "id": "/lccn/sn87093055/"
+    },
+    {
+      "title": "Washington State journal and Adams County news.",
+      "placeOfPublication": "Ritzville, Wash.",
+      "id": "/lccn/sn87093057/"
+    },
+    {
+      "title": "The Oakes times.",
+      "placeOfPublication": "Oakes, N.D.",
+      "id": "/lccn/sn87096017/"
+    },
+    {
+      "title": "Emmons County record.",
+      "placeOfPublication": "Williamsport, D.T. [i.e. N.D.]",
+      "id": "/lccn/sn87096040/"
+    },
+    {
+      "title": "The silver blade.",
+      "placeOfPublication": "Rathdrum, Idaho",
+      "id": "/lccn/sn88056092/"
+    },
+    {
+      "title": "The St. Mary banner.",
+      "placeOfPublication": "Franklin, Parish of St. Mary, La.",
+      "id": "/lccn/sn88064384/"
+    },
+    {
+      "title": "The Bowbells tribune.",
+      "placeOfPublication": "Bowbells, Ward Co., N.D.",
+      "id": "/lccn/sn88076095/"
+    },
+    {
+      "title": "Oakes weekly Republican.",
+      "placeOfPublication": "Oakes, Dickey County, D.T. [i.e. N.D.]",
+      "id": "/lccn/sn88076144/"
+    },
+    {
+      "title": "Oakes Republican.",
+      "placeOfPublication": "Oakes, N.D.",
+      "id": "/lccn/sn88076145/"
+    },
+    {
+      "title": "The Cooperstown courier.",
+      "placeOfPublication": "Cooperstown, Griggs Co., N.D.",
+      "id": "/lccn/sn88076341/"
+    },
+    {
+      "title": "Devils Lake inter-ocean and Devils Lake free press.",
+      "placeOfPublication": "Devils Lake, Ramsey County, N.D.",
+      "id": "/lccn/sn88076515/"
+    },
+    {
+      "title": "Devils Lake inter-ocean.",
+      "placeOfPublication": "Devils Lake, N.D.",
+      "id": "/lccn/sn88076516/"
+    },
+    {
+      "title": "The Devils Lake world.",
+      "placeOfPublication": "Devils Lake, N.D.",
+      "id": "/lccn/sn88076522/"
+    },
+    {
+      "title": "Devils Lake weekly world.",
+      "placeOfPublication": "Devils Lake, N.D.",
+      "id": "/lccn/sn88076523/"
+    }
+  ]
 }

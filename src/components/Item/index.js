@@ -1,25 +1,30 @@
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
 
-import { Wrapper, Title, GreyBg, PlaceOfPublication } from './styles.js'
+import { Wrapper, Title, GreyBg, PlaceOfPublication } from "./styles";
 
-export default (props) => {
-    const { data } = props;
+const Item = ({ data }) => {
+  const { title, placeOfPublication } = data;
+  return (
+    <Wrapper>
+      <Title>
+        <span>{title}</span>
+      </Title>
 
-    return (
-        <Wrapper>
-            <Title>
-                <span>
-                    {data.title}
-                </span>
-            </Title>
+      <GreyBg />
 
-            <GreyBg></GreyBg>
+      <PlaceOfPublication>
+        <span>{placeOfPublication}</span>
+      </PlaceOfPublication>
+    </Wrapper>
+  );
+};
 
-            <PlaceOfPublication>
-                <span>
-                    {data.placeOfPublication}
-                </span>
-            </PlaceOfPublication>
-        </Wrapper>
-    )
-}
+Item.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    placeOfPublication: PropTypes.string
+  }).isRequired
+};
+
+export default Item;

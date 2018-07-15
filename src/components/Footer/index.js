@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
 
-import { Text, Wrapper } from './styles.js'
+import { Text, Wrapper } from "./styles";
 
-const Footer = () =>
+const Footer = () => (
   <Wrapper>
-    <Text>footer</Text>
-  </Wrapper>;
+    <Text>{"footer"}</Text>
+  </Wrapper>
+);
 
 export default Footer;

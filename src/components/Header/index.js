@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
 
-import { Text, Wrapper } from './styles.js'
+import { Text, Wrapper } from "./styles";
 
-const Header = () =>
+const Header = () => (
   <Wrapper>
-    <Text>header</Text>
-  </Wrapper>;
+    <Text>{"header"}</Text>
+  </Wrapper>
+);
 
 export default Header;
