@@ -7,6 +7,7 @@
     "dev": "webpack --mode development --env.dist=false",
     "dev:dist": "webpack --mode development",
     "start": "webpack-dev-server --open --mode development",
+    "server": "json-server db.json",
     "build": "webpack"
   },
   "keywords": [],
@@ -24,8 +25,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.11",
-    "eslint": "^4.19.1",
-    "eslint-config-google": "^0.9.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "react-svg-loader": "^2.1.0",
@@ -35,6 +34,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "json-server": "^0.14.0",
     "mobx": "^5.0.2",
     "mobx-react": "^5.2.3",
     "react": "^16.4.1",

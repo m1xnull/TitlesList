@@ -31,15 +31,15 @@ class TitlesStore {
 
     @action('FETCH ARTICLES')
     async fetchArticles() {
-        const url = `https://chroniclingamerica.loc.gov/search/titles/results/?terms=${this.searchValue}&format=json&page=1`;
+        const url = `http://localhost:3000/items?q=${this.searchValue}`;
         try {
             this.searchStatus = 'loading';
             let response = await fetch(url);
             let data = await response.json();
 
             runInAction(() => {
-                this.filteredData.replace(data.items.map(item =>
-                    new Title(item.title, item.place_of_publication, item.id)));
+                this.filteredData.replace(data.map(item =>
+                    new Title(item.title, item.placeOfPublication, item.id)));
                 this.filteredData.length == 0 ? this.searchStatus = 'empty' : this.searchStatus = 'pending';
             });
         }
