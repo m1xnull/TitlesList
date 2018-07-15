@@ -1,0 +1,12 @@
+.header {
+  height: 96px;
+  background: #d2d3d5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inscription {
+  font-size: 48px;
+  text-transform: uppercase;
+}
