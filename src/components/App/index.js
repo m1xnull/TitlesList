@@ -7,19 +7,24 @@ import Footer from '../Footer';
 import Search from '../Search';
 import Main from '../Main';
 
+import { Provider } from "mobx-react";
+import TitlesStore from '../../stores/TitlesStore';
+
 export default class App extends Component {
     render() {
         return (
-            <div className={styles.flexContainer}>
-                <div className={styles.container}>
-                    <div>
-                        <Header />
-                        <Search />
-                        <Main />
+            <Provider titlesStore={TitlesStore}>
+                <div className={styles.flexContainer}>
+                    <div className={styles.container}>
+                        <div>
+                            <Header />
+                            <Search />
+                            <Main />
+                        </div>
+                        <Footer />
                     </div>
-                    <Footer />
                 </div>
-            </div>
+            </Provider>
         );
     }
 }

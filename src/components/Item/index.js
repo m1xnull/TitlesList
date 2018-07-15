@@ -2,12 +2,15 @@ import React from 'react'
 import styles from './styles.css'
 
 export default (props) => {
+
+    const { data } = props;
+
     return (
         <div className={styles.itemDiv}>
 
             <div className={styles.title}>
                 <span>
-                    {props.title}
+                    {data.title}
                 </span>
             </div>
 
@@ -15,10 +18,10 @@ export default (props) => {
 
             <div className={styles.placeOfPublication}>
                 <span>
-                    {props.placeOfPublication}
+                    {data.placeOfPublication}
                 </span>
             </div>
-            
+
         </div>
     )
 }
